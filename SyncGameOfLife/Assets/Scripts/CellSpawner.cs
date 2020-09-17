@@ -25,6 +25,8 @@ public class CellSpawner : MonoBehaviour
 
         eventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.MasterClient };
         sendOptions = new SendOptions { Reliability = true };
+
+        PhotonNetwork.RaiseEvent(6, null, eventOptions, sendOptions);
     }
 
     public void SpawnCells()
@@ -39,8 +41,6 @@ public class CellSpawner : MonoBehaviour
                     cells[x, y, z] = Instantiate(cellObj, new Vector3(x, y, z), Quaternion.identity);
                     cells[x, y, z].SetActive(false);
                 }
-
-        PhotonNetwork.RaiseEvent(6, null, eventOptions, sendOptions);
     }
 
     public void UpdateCells(List<Vector3Int> changedCells)

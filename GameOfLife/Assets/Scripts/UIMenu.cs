@@ -9,9 +9,9 @@ public class UIMenu : MonoBehaviour
 {
     [SerializeField] private GameObject[] picturies;
 
-    [SerializeField] private Text bornInfo;
-    [SerializeField] private Text liveInfo;
-    [SerializeField] private Text cellsCount;
+    [SerializeField] private Text birthInfo;
+    [SerializeField] private Text lifeInfo;
+    [SerializeField] private Text cellsNumber;
 
     [SerializeField] private Text currentFigure;
     [SerializeField] private Text figuresCount;
@@ -81,17 +81,17 @@ public class UIMenu : MonoBehaviour
         if (!Int32.TryParse(length.text, out Parameters.length))
             return false;
 
-        if (!Int32.TryParse(cellsCount.text, out Parameters.count))
+        if (!Int32.TryParse(cellsNumber.text, out Parameters.count))
             return false;
 
         int[] numbersArray;
 
-        if (!TryStringToInt(bornInfo.text, out numbersArray))
+        if (!TryStringToInt(birthInfo.text, out numbersArray))
             return false;
         Parameters.neighborsToBorn.Clear();
         Parameters.neighborsToBorn.AddRange(numbersArray);
 
-        if (!TryStringToInt(liveInfo.text, out numbersArray))
+        if (!TryStringToInt(lifeInfo.text, out numbersArray))
             return false;
         Parameters.neighborsToLive.Clear();
         Parameters.neighborsToLive.AddRange(numbersArray);
