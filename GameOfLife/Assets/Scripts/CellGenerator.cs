@@ -45,6 +45,8 @@ public class CellGenerator : MonoBehaviour
                 for (int z = 0; z < Parameters.length; z++)
                     cells[x, y, z] = false;
 
+        Parameters.maxCellsNum = Parameters.length * Parameters.length * Parameters.length;
+
         switch (Parameters.mode)
         {
             case "Custom":
@@ -86,7 +88,7 @@ public class CellGenerator : MonoBehaviour
     private void GenerateCustomParameters()
     {
 
-        for (int i = 0; i < Parameters.count; i++)
+        for (int i = 0; i < Parameters.count && i < Parameters.maxCellsNum; i++)
         {
             bool found = false;
             while (!found)

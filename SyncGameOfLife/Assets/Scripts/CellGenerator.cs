@@ -55,6 +55,8 @@ public class CellGenerator : MonoBehaviour
                 for (int z = 0; z < Parameters.length; z++)
                     cells[x, y, z] = false;
 
+        Parameters.maxCellsNum = Parameters.length * Parameters.length * Parameters.length;
+
         switch (Parameters.mode)
         {
             case "Custom":

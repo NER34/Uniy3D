@@ -9,4 +9,5 @@ public class Parameters : MonoBehaviour
     public static int length;
     public static int count;
     public static string mode;
+    public static int maxCellsNum;
 }

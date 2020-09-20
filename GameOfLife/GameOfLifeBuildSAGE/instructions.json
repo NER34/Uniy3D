@@ -1,0 +1,7 @@
+{
+  "main_script": "UnityLoader.js",
+  "width": 960,
+  "height": 600,
+  "title": "Game Of Life",
+  "animation": true
+}

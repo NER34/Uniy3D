@@ -80,6 +80,7 @@ public class UIMenu : MonoBehaviour
 
         if (!Int32.TryParse(length.text, out Parameters.length))
             return false;
+        Parameters.length = Mathf.Clamp(Parameters.length, 5, 30);
 
         if (!Int32.TryParse(cellsNumber.text, out Parameters.count))
             return false;

@@ -87,7 +87,6 @@ public class UIClient : MonoBehaviour
 
         if (!Int32.TryParse(cellsCount.text, out Parameters.count))
             return false;
-        //Parameters.length = Mathf.Clamp(Parameters.count, 0, (int)Mathf.Pow(Parameters.length, 3));
 
         int[] numbersArray;
 
