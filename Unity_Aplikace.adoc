@@ -4,26 +4,28 @@ SAGE2 podporuje spuštění Unity3D aplikaci. Jako přiklad ukážeme vám náš
 
 Na začátku potřebujeme spustit dvě verzi hry. Jednu na SAGE2 a druhou na vaším počítači. Po spuštění v obou verzích vás setká menu připojení.
 
-image::menu_pripojeni.png[]
+image::https://github.com/NER34/Uniy3D/blob/master/Picturies/menu_pripojeni.png[]
 
-Z verzi pro počítač vytvoříme server stísknutím tlačítka **Create Server** (O tom, proč potřebujeme server, budeme mluvit trochu později). Pak počkejte chvíli, než se v aplikaci pro SAGE2 objeví nápis "Server Onine" a stískněte tlačítko **Connect to Server**. Po stísknutí se objeví menu nastavení hry. 
+Z verzi pro počítač vytvoříme server stísknutím tlačítka **Create Server** (O tom, proč potřebujeme server, budeme mluvit trochu později). Pak počkejte chvíli, než se v aplikaci pro SAGE2 objeví nápis "Server Onine" a stískněte tlačítko **Connect to Server**. Po stísknutí se objeví menu nastavení hry.
 
-image::menu_nastaveni.png[]
+Tady můžete uvést velikost oblasti, ve které budou buňky žít, jejích počáteční množstvi a pravidla, které bude algoritmus používat. Pokud v libovolném programu stískněte tlačítko **Leave**, uzavřé všechny clienty a server. 
 
-Tady můžete uvést velikost oblasti, ve které budou buňky žít, jejích počáteční množstvi a pravidla, které bude algoritmus používat. Pokud v libovolném programu stískněte tlačítko **Leave**, uzavřé všechny clienty a server. Pokud jste spravně uvedli všechna data musíte stísknout tlačítko **Continue** aby začit hru.
+image::https://github.com/NER34/Uniy3D/blob/master/Picturies/menu_nastaveni.png[]
 
-image::hra.png[]
+Pokud jste spravně uvedli všechna data musíte stísknout tlačítko **Continue** aby začit hru. 
+
+image::https://github.com/NER34/Uniy3D/blob/master/Picturies/hra.png[]
 
 ==== Spuštění Unity aplikace
 
 Za prvé potřebujete project spravně sestavit. Přejdeme do **File/Build Settings** a změníme platformu na WebGL.
 
-image::zmena_platformy.png[]
+image::https://github.com/NER34/Uniy3D/blob/master/Picturies/zmena_platformy.png[]
 
 Dále v menu **Build Settings** stískneme tlačítko **Player Settings**. V okně **Inspector** najdeme **Rezolution and Presentation**. Tady musíme změnit **WebGL Template** 
 na **Minimal**.
 
-image::webgl_template.png[]
+image::https://github.com/NER34/Uniy3D/blob/master/Picturies/webgl_template.png[]
 
 Dále musíme sestavit projekt, uložit ho do ZIP-souboru a spustit pomoci web clientu. SAGE2 automaticky vygeneruje soubor instructions.json. Pokud ale budete chtit ho napsát sami potřebujete minimálně tento kod.
 
@@ -36,7 +38,7 @@ Dále musíme sestavit projekt, uložit ho do ZIP-souboru a spustit pomoci web c
    "animation": true
  }
  
- Uložit JSON soubor musíte do složky ve které se nachází **Build folder** a **index.html**.
+Uložit JSON soubor musíte do složky ve které se nachází **Build folder** a **index.html**.
  
 ==== Interakce s aplikací
  
@@ -48,4 +50,8 @@ Interakce přímo na display clientu podporuje všechny vstupy. SAGEPointer ale 
 
 Tady řekneme o tom proč používáme v naším projektu server. Vspomeneme si na archetikturu SAGE2. Na počítačích, ke kterým připojeny obrazovky, mame spuštěne display klienty a na jednom počítači beží SAGE server, který display klienty synchronizuje. Při spuštění libovolného programu na SAGE každý display klient spušťuje instance tohoto programu a server je synchronizuje.
 
-Unity aplikace funguji na podobném principu. Jediný problem je v tom, že SAGE2 ne podporuje synchronizaci takových aplikaci mezi display klienty a na moment konce leta roku 2020 neexistuje oficialního způsobu je synchronizovat. A proto pokud budete chtit udělat hru pomoci Unity3D budete muset vymyšlet spůsob synchronizovat náhodné parametry. Napřiklad v naším projektu jsme používali bezplatnou verzi plagynu PhotonUnityNetwork.
+Unity aplikace funguji na podobném principu. Jediný problem je v tom, že SAGE2 ne podporuje synchronizaci takových aplikaci mezi display klienty a na moment konce leta roku 2020 neexistuje oficialního způsobu je synchronizovat.
+
+image::https://github.com/NER34/Uniy3D/blob/master/Picturies/odpoved_vyvojaru.png[]
+
+A proto pokud budete chtit udělat hru pomoci Unity3D budete muset vymyšlet spůsob synchronizovat náhodné parametry. Napřiklad v naším projektu jsme používali bezplatnou verzi plagynu PhotonUnityNetwork.
