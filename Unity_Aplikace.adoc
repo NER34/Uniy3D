@@ -8,13 +8,17 @@ image::https://github.com/NER34/Uniy3D/blob/master/Picturies/menu_pripojeni.png[
 
 Z verzi pro počítač vytvoříme server stísknutím tlačítka **Create Server** (O tom, proč potřebujeme server, budeme mluvit trochu později). Pak počkejte chvíli, než se v aplikaci pro SAGE2 objeví nápis "Server Onine" a stískněte tlačítko **Connect to Server**. Po stísknutí se objeví menu nastavení hry.
 
-Tady můžete uvést velikost oblasti, ve které budou buňky žít, jejích počáteční množstvi a pravidla, které bude algoritmus používat. Pokud v libovolném programu stískněte tlačítko **Leave**, uzavřé všechny clienty a server. 
+image::https://github.com/NER34/Uniy3D/blob/master/Picturies/menu_nastaveni_1.png[]
 
-image::https://github.com/NER34/Uniy3D/blob/master/Picturies/menu_nastaveni.png[]
+Musíte tady vybrat figuru, jejích počet a uvést velikost plochy, ve které budou buňky žít. Pokud budete chtit zkusit svoje vlastní pravidla, stiskněte tlačitko *Custom properties*. Mimo pravidel musíte uvést počet buňek, které náhodně objeví na začátku hry. Vratit se mužete stísknutím tlačítka *Ready-made figures*.
 
-Pokud jste spravně uvedli všechna data musíte stísknout tlačítko **Continue** aby začit hru. 
+image::https://github.com/NER34/Uniy3D/blob/master/Picturies/menu_nastaveni_2.png[]
+
+Po uvédení dát stískněte tlačítko **Continue** aby začit hru. 
 
 image::https://github.com/NER34/Uniy3D/blob/master/Picturies/hra.png[]
+
+Stísknutím po synchronizaci v libovolném programu tlačítka **Leave** uzavřete všechny clienty a server. 
 
 ==== Spuštění Unity aplikace
 
